@@ -46,7 +46,7 @@ spec:
           - --v={{ .Values.logLevel }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.image.repository }}:{{ index .Values.image.tags (printf "%v" .Values.eksVersion) }}"
+          image: "{{ .Values.image.repository }}:{{ index .Values.image.tags (printf "%s" .Values.eksVersion) }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}
