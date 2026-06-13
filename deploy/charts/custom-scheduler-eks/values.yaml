@@ -14,6 +14,9 @@ schedulerName: custom-scheduler-eks
 image:
   repository: public.ecr.aws/eks-distro/kubernetes/kube-scheduler
   pullPolicy: IfNotPresent
+  # Full image tag override. When set, it is used directly and the
+  # eksVersion -> tags lookup below is ignored.
+  tag: ""
   tags:
     "1.24": "v1.24.17-eks-1-24-latest"
     "1.25": "v1.25.16-eks-1-25-latest"
