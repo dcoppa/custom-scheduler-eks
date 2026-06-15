@@ -11,6 +11,9 @@ leaderElection:
 logLevel: 5
 schedulerName: custom-scheduler-eks
 
+# Address the scheduler binds to. Use "0.0.0.0" for IPv4 or "::" for IPv6.
+bindAddress: "0.0.0.0"
+
 image:
   repository: public.ecr.aws/eks-distro/kubernetes/kube-scheduler
   pullPolicy: IfNotPresent
