@@ -132,6 +132,8 @@ affinity:
           app.kubernetes.io/name: custom-scheduler-eks
       topologyKey: kubernetes.io/hostname
 
+topologySpreadConstraints: []
+
 # Monitoring configuration
 monitoring:
   enabled: false
