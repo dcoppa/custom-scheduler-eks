@@ -24,7 +24,7 @@ spec:
       insecureSkipVerify: {{ .Values.monitoring.serviceMonitor.insecureSkipVerify | default false }}
   namespaceSelector:
     matchNames:
-    - {{ .Release.Namespace }}
+    - {{ .Values.nameSpace }}
   selector:
     matchLabels:
       {{- include "custom-scheduler-eks.labels" . | nindent 6 }}
